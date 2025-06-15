@@ -1,0 +1,239 @@
+.home {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+/* Course Info Section */
+.course-info {
+  padding: 4rem 0;
+  background-color: var(--surface);
+}
+
+.course-info h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.topic-card {
+  background-color: var(--background);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  color: var(--text);
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Professor Section */
+.professor {
+  padding: 4rem 0;
+}
+
+.professor h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.professor-card {
+  display: flex;
+  gap: 2rem;
+  background-color: var(--surface);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.professor-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.professor-info {
+  flex: 1;
+}
+
+.professor-info h3 {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.professor-info p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.expertise h4 {
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+/* Students Section */
+.students {
+  padding: 4rem 0;
+  background-color: var(--surface);
+}
+
+.students h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.student-card {
+  background-color: var(--background);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.student-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.student-card h3 {
+  padding: 1rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.student-card p {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.skills {
+  padding: 0 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background-color: var(--surface);
+  color: var(--text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+}
+
+.student-card .btn {
+  margin: 1rem;
+  width: calc(100% - 2rem);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.error {
+  color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .professor-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .professor-photo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .tags {
+    justify-content: center;
+  }
+} 
